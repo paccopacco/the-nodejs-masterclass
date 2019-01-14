@@ -1,8 +1,8 @@
-#The Node.js Masterclass - Homework Assignment 01
+# The Node.js Masterclass - Homework Assignment 01
 
 This is a minimal routing app that will provide a greeting response from a single path in the form of a JSON object.
 
-##INSTRUCTIONS
+## INSTRUCTIONS
 
 * On the command line execute:
 
