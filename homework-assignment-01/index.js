@@ -33,7 +33,7 @@ req.on('end',function(){
         // Buffer the request payload's tail.
         requestPayloadBuffer += decoder.end();
         
-        // Choose the handler for thid request.
+        // Select a handler for this request.
         var chosenHandler = typeof(router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : handlers.notFound;
         
         // Construct the data object to send to the handler.
@@ -45,14 +45,14 @@ req.on('end',function(){
             'payload'           : requestPayloadBuffer          
         };
         
-        // Route the request to the handler specified in the router.
+        // Route the request to the handler chosen from the router.
         chosenHandler(data,function(statusCode,responsePayload){
         
-            // Set defaults for the chosen handler.
+            // Set defaults for the handler.
             statusCode = typeof(statusCode) ===  'number' ? statusCode : 200;
             responsePayload = typeof(responsePayload) === 'object' ? responsePayload : {};
             
-            // Convert to a string the payload we will send to the user.
+            // Convert the response payload to a string.
             var responsePayloadString = JSON.stringify(responsePayload);
             
             // Send the reponse
@@ -60,15 +60,15 @@ req.on('end',function(){
             res.writeHead(statusCode);
             res.end(responsePayloadString);
         
-            // Log the request path
+            // Log the request response.
             console.log('Returning this response: ', statusCode,responsePayloadString);
         });
     });
 });
 
-// Start the server on port 5000
-server.listen(5000, function(){
-    console.log('\n\nThe server is listening on port 5000 now.\n\n');
+// Start the server on port 3000
+server.listen(3000, function(){
+    console.log('\n\nThe server is listening on port 3000 now.\n\n');
 });
    
 // Define the handlers
