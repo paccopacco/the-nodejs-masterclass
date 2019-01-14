@@ -10,11 +10,11 @@ This is a minimal routing app that will provide a greeting response from a singl
     
 * Use Postman to issue a request to:
 
-    ```localhost:5000/hello```
+    ```localhost:3000/hello```
     
     or
     
-    ```localhost:5000/hello/```
+    ```localhost:3000/hello/```
     
     This will send back a JSON object with a greeting and a **200 'OK'** HTTP Status Code.
 
