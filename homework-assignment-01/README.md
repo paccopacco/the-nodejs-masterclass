@@ -20,7 +20,7 @@ This is a minimal routing app that will provide a greeting response from a singl
 
 * A request to the same path with a query string, such as:
 
-    ```localhost:5000/hello/?fizz=buzz```
+    ```localhost:3000/hello/?fizz=buzz```
     
     will also issue the same response since the query string is being handled separately from the path.
 
